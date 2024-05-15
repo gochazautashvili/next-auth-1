@@ -1,7 +1,13 @@
+import { Suspense } from "react";
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return <main>{children}</main>;
+  return (
+    <main>
+      <Suspense fallback="Loading...">{children}</Suspense>
+    </main>
+  );
 }
