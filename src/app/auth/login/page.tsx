@@ -130,7 +130,7 @@ const Login = () => {
         </button>
         <Social />
         <div className="mt-5">
-          <Link href="/auth/register">Don't have an account?</Link>
+          <Link href="/auth/register">Don&apos;t have an account?</Link>
         </div>
       </form>
     </div>
