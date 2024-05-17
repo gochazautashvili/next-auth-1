@@ -23,6 +23,7 @@ const Header = async () => {
           <form
             action={async () => {
               "use server";
+
               await signOut();
             }}
           >
