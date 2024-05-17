@@ -8,6 +8,11 @@ import { getTwoFactorConfirmationByUserId } from "./data/two-factor-confirmation
 
 export const { handlers, signIn, signOut, auth } = NextAuth({
   adapter: PrismaAdapter(db),
+  session: { strategy: "jwt" },
+  pages: {
+    signIn: "/auth/login",
+    error: "/auth/error",
+  },
   events: {
     async linkAccount({ user }) {
       await db.user.update({
